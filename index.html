@@ -30,166 +30,163 @@
     ></script>
   </head>
   <body>
+    <nav class="bg-color_black shadow-md sticky top-0 z-30">
+      <div
+        class="max-w-6xl flex flex-wrap items-center justify-between mx-auto py-4"
+      >
+        <a
+          href="index.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse text-color_white font-bold text-2xl"
+        >
+          <span class="text-color_one me-2">XRO </span> INSURANCE
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 items-center"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
+                >Home</a
+              >
+            </li>
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0 md:w-auto"
+              >
+                Shop
+                <svg
+                  class="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+              >
+                <ul class="py-2 text-sm text-gray-700">
+                  <li>
+                    <a
+                      href="auto.html"
+                      class="block px-4 py-2 hover:bg-gray-100"
+                      >Auto insurance</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="home.html"
+                      class="block px-4 py-2 hover:bg-gray-100"
+                      >Home insurance</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="renters.html"
+                      class="block px-4 py-2 hover:bg-gray-100"
+                      >Renters insurance</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="life.html"
+                      class="block px-4 py-2 hover:bg-gray-100"
+                      >Life insurance</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pet.html" class="block px-4 py-2 hover:bg-gray-100"
+                      >Pet insurance</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="Other.html"
+                      class="block px-4 py-2 hover:bg-gray-100"
+                      >Other insurance</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="#career"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
+                >Career</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="relative inline-flex items-center justify-start px-6 py-1.5 overflow-hidden font-medium transition-all rounded-full hover:bg-white group bg-white"
+              >
+                <span
+                  class="w-48 h-48 rounded rotate-[-40deg] bg-color_one absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"
+                ></span>
+                <span
+                  class="relative w-full text-left text-color_black transition-colors duration-300 ease-in-out group-hover:text-white"
+                >
+                  <i class="fa-regular fa-user"></i> Log-in
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <header>
       <!-- Navbar -->
-
-      <nav class="bg-color_black shadow-md">
-        <div
-          class="max-w-6xl flex flex-wrap items-center justify-between mx-auto py-4"
-        >
-          <a
-            href="index.html"
-            class="flex items-center space-x-3 rtl:space-x-reverse text-color_white font-bold text-2xl"
-          >
-            <span class="text-color_one me-2">XRO </span> INSURANCE
-          </a>
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul
-              class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 items-center"
-            >
-              <li>
-                <a
-                  href="index.html"
-                  class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <button
-                  id="dropdownNavbarLink"
-                  data-dropdown-toggle="dropdownNavbar"
-                  class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0 md:w-auto"
-                >
-                  Shop
-                  <svg
-                    class="w-2.5 h-2.5 ms-2.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div
-                  id="dropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-                >
-                  <ul class="py-2 text-sm text-gray-700">
-                    <li>
-                      <a
-                        href="auto.html"
-                        class="block px-4 py-2 hover:bg-gray-100"
-                        >Auto insurance</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="home.html"
-                        class="block px-4 py-2 hover:bg-gray-100"
-                        >Home insurance</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="renters.html"
-                        class="block px-4 py-2 hover:bg-gray-100"
-                        >Renters insurance</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="life.html"
-                        class="block px-4 py-2 hover:bg-gray-100"
-                        >Life insurance</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="pet.html"
-                        class="block px-4 py-2 hover:bg-gray-100"
-                        >Pet insurance</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="Other.html"
-                        class="block px-4 py-2 hover:bg-gray-100"
-                        >Other insurance</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
-                  >Pricing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#career"
-                  class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
-                  >Career</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="relative inline-flex items-center justify-start px-6 py-1.5 overflow-hidden font-medium transition-all rounded-full hover:bg-white group bg-white"
-                >
-                  <span
-                    class="w-48 h-48 rounded rotate-[-40deg] bg-color_one absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"
-                  ></span>
-                  <span
-                    class="relative w-full text-left text-color_black transition-colors duration-300 ease-in-out group-hover:text-white"
-                  >
-                    <i class="fa-regular fa-user"></i> Log-in
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
       <!-- Hero section -->
       <div
@@ -221,35 +218,47 @@
       </div>
       <!-- Insurance section -->
       <div
-        class="max-w-5xl mx-auto bg-white rounded-lg grid grid-cols-6 shadow-xl mb-32 py-6 px-10 py- relative -top-20 gap-4"
+        class="max-w-5xl mx-auto bg-white rounded-lg grid grid-cols-6 shadow-xl mb-10 py-6 px-10 py- relative -top-20 gap-4"
       >
-        <div class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100">
+        <div
+          class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100"
+        >
           <img class="w-16 mx-auto" src="icon/house.png" alt="" />
           <p class="font-bold text-xl text-center text-color_black mt-2">
             Home
           </p>
         </div>
-        <div class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100">
+        <div
+          class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100"
+        >
           <img class="w-16 mx-auto" src="icon/car.png" alt="" />
           <p class="font-bold text-xl text-center text-color_black mt-2">Car</p>
         </div>
-        <div class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100">
+        <div
+          class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100"
+        >
           <img class="w-16 mx-auto" src="icon/life.png" alt="" />
           <p class="font-bold text-xl text-center text-color_black mt-2">
             Life
           </p>
         </div>
-        <div class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100">
+        <div
+          class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100"
+        >
           <img class="w-16 mx-auto" src="icon/pets.png" alt="" />
           <p class="font-bold text-xl text-center text-color_black mt-2">Pet</p>
         </div>
-        <div class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100">
+        <div
+          class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100"
+        >
           <img class="w-16 mx-auto" src="icon/motorcycle.png" alt="" />
           <p class="font-bold text-xl text-center text-color_black mt-2">
             Motorcycle
           </p>
         </div>
-        <div class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100">
+        <div
+          class="border-2 border-white rounded-md py-2 hover:border-color_one duration-100"
+        >
           <img class="w-16 mx-auto" src="icon/travel.png" alt="" />
           <p class="font-bold text-xl text-center text-color_black mt-2">
             Travel
@@ -257,6 +266,83 @@
         </div>
       </div>
     </header>
+
+    <main>
+      <!-- personalized quotes -->
+      <section class="max-w-3xl mx-auto mb-32">
+        <h1 class="text-5xl font-black text-center">
+          Get personalized quotes <br />in 5 minutes
+        </h1>
+        <p class="text-center text-lg font-medium text-gray-700 mt-4">
+          No matter where you live or what you drive, we find the policies that
+          are right for you.
+        </p>
+
+        <!-- box 1 -->
+        <div class="mt-20 flex gap-16 justify-center items-center">
+          <div class="">
+            <img
+              class="w-full"
+              src="image/homepage-auto-rate-card.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="flex-1">
+            <h2 class="text-4xl font-black text-justify">
+              One marketplace for <br />
+              every major provider
+            </h2>
+            <p class="mt-4 font-medium text-gray-700 text-lg text-justify">
+              No need to shop around. Review every <br />major provider
+              side-by-side in one place.
+            </p>
+          </div>
+        </div>
+
+        <!-- box 2 -->
+        <div class="mt-20 flex gap-16 justify-center items-center">
+          <div class="">
+            <img
+              class="w-full"
+              src="image/homepage-sitting-person.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="flex-1">
+            <h2 class="text-4xl font-black text-justify">
+              Find a match and save <br />
+              hundreds every year
+            </h2>
+            <p class="mt-4 font-medium text-gray-700 text-lg text-justify">
+              Whether you're looking to save on a car or <br />home policy, we
+              find the best value for you.
+            </p>
+          </div>
+        </div>
+        <!-- box 3 -->
+        <div class="mt-20 flex gap-16 justify-center items-center">
+          <div class="">
+            <img
+              class="w-full"
+              src="image/homepage-ask-an-agent.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="flex-1">
+            <h2 class="text-4xl font-black text-justify">
+              We've got you <br />
+              covered
+            </h2>
+            <p class="mt-4 font-medium text-gray-700 text-lg text-justify">
+              Our licensed agents are always standing by <br />to help you as your needs change.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   </body>
