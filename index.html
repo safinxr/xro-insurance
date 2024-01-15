@@ -17,7 +17,7 @@
             colors: {
               color_one: "#E10EF3",
               color_two: "#6A7BAC",
-              color_black: "#191D0E",
+              color_black: "#0A0C0E",
               color_white: "#E4E7F9",
             },
           },
@@ -33,22 +33,20 @@
     <header>
       <!-- Navbar -->
 
-      <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <nav class="bg-color_black shadow-md">
         <div
-          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+          class="max-w-6xl flex flex-wrap items-center justify-between mx-auto py-4"
         >
           <a
-            href="https://flowbite.com/"
+            href="index.html"
             class="flex items-center space-x-3 rtl:space-x-reverse text-color_white font-bold text-2xl"
           >
-            XRO INSURANCE
+            <span class="text-color_one me-2">XRO </span> INSURANCE
           </a>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           >
             <span class="sr-only">Open main menu</span>
             <svg
@@ -69,56 +67,111 @@
           </button>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul
-              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 items-center"
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  items-center"
             >
               <li>
                 <a
-                  href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0 dark:text-white md:dark:hover:text-color_one dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  aria-current="page"
+                  href="index.html"
+                  class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
                   >Home</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0 dark:text-white md:dark:hover:text-color_one dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >About</a
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0 md:w-auto"
                 >
+                  Shop
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                >
+                  <ul class="py-2 text-sm text-gray-700">
+                    <li>
+                      <a href="auto.html" class="block px-4 py-2 hover:bg-gray-100"
+                        >Auto insurance</a
+                      >
+                    </li>
+                    <li>
+                      <a href="home.html" class="block px-4 py-2 hover:bg-gray-100"
+                        >Home insurance</a
+                      >
+                    </li>
+                    <li>
+                      <a href="renters.html" class="block px-4 py-2 hover:bg-gray-100"
+                        >Renters insurance</a
+                      >
+                    </li>
+                    <li>
+                      <a href="life.html" class="block px-4 py-2 hover:bg-gray-100"
+                        >Life insurance</a
+                      >
+                    </li>
+                    <li>
+                      <a href="pet.html" class="block px-4 py-2 hover:bg-gray-100"
+                        >Pet insurance</a
+                      >
+                    </li>
+                    <li>
+                      <a href="Other.html" class="block px-4 py-2 hover:bg-gray-100"
+                        >Other insurance</a
+                      >
+                    </li>
+                  </ul>                  
+                </div>
               </li>
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0 dark:text-white md:dark:hover:text-color_one dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
                   >Services</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0 dark:text-white md:dark:hover:text-color_one dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
                   >Pricing</a
                 >
               </li>
               <li>
                 <a
                   href="#career"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0 dark:text-white md:dark:hover:text-color_one dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
                   >Career</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="relative inline-flex items-center justify-start px-6 py-1.5 overflow-hidden font-medium transition-all bg-white rounded-full hover:bg-white group"
+                  class="relative inline-flex items-center justify-start px-6 py-1.5 overflow-hidden font-medium transition-all rounded-full hover:bg-white group bg-white"
                 >
                   <span
                     class="w-48 h-48 rounded rotate-[-40deg] bg-color_one absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"
                   ></span>
                   <span
-                    class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white"
-                    ><i class="fa-regular fa-user"></i> Log-in</span
+                    class="relative w-full text-left text-color_black transition-colors duration-300 ease-in-out group-hover:text-white"
                   >
+                    <i class="fa-regular fa-user"></i> Log-in
+                  </span>
                 </a>
               </li>
             </ul>
