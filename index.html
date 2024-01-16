@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XRO Insurance</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
       rel="stylesheet"
+      type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -30,152 +31,110 @@
     ></script>
   </head>
   <body>
-    <nav class="bg-color_black shadow-md sticky top-0 z-30">
-      <div
-        class="max-w-6xl flex flex-wrap items-center justify-between mx-auto py-4"
-      >
-        <a
-          href="index.html"
-          class="flex items-center space-x-3 rtl:space-x-reverse text-color_white font-bold text-2xl"
-        >
-          <span class="text-color_one me-2">XRO </span> INSURANCE
-        </a>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
+    <nav class="bg-color_black shadow-md sticky top-0 z-30 bg-white">
+      <div class="navbar max-w-6xl mx-auto">
+        <div class="navbar-start">
+          <!-- <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div> -->
+
+          <!-- =========logo=======-->
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse text-color_black font-bold text-2xl"
           >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 items-center"
-          >
+            <span class="text-color_one me-2">XRO </span> INSURANCE
+          </a>
+        </div>
+
+        <!-- =========nav link=======-->
+        <div class="navbar-end hidden lg:flex">
+          <ul class="flex gap-8 items-center">
             <li>
               <a
                 href="index.html"
-                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
+                class="font-medium text-lg hover:text-color_one"
                 >Home</a
               >
             </li>
-            <li>
-              <button
-                id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0 md:w-auto"
-              >
-                Shop
-                <svg
-                  class="w-2.5 h-2.5 ms-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </button>
-              <!-- Dropdown menu -->
-              <div
-                id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-              >
-                <ul class="py-2 text-sm text-gray-700">
-                  <li>
-                    <a
-                      href="auto.html"
-                      class="block px-4 py-2 hover:bg-gray-100"
-                      >Auto insurance</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="home.html"
-                      class="block px-4 py-2 hover:bg-gray-100"
-                      >Home insurance</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="renters.html"
-                      class="block px-4 py-2 hover:bg-gray-100"
-                      >Renters insurance</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="life.html"
-                      class="block px-4 py-2 hover:bg-gray-100"
-                      >Life insurance</a
-                    >
-                  </li>
-                  <li>
-                    <a href="pet.html" class="block px-4 py-2 hover:bg-gray-100"
-                      >Pet insurance</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="Other.html"
-                      class="block px-4 py-2 hover:bg-gray-100"
-                      >Other insurance</a
-                    >
-                  </li>
-                </ul>
-              </div>
+
+            <li
+              class=" dropdown"
+            >
+              <p class="cursor-pointer font-medium text-lg hover:text-color_one">Shop</p>
+              <ul class="dropdown-menu">
+                <li><a href="auto.html">Auto insurance</a></li>
+                <li><a href="home.html">Home insurance</a></li>
+                <li><a href="life.html">Life Insurance</a></li>
+                <li><a href="pet.html">Pet insurance</a></li>
+                <li><a href="renters.html">Renters insurance</a></li>
+                <li><a href="Other.html"> Other insurance</a></li>
+              </ul>
             </li>
+            
             <li>
               <a
-                href="#"
-                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
+                href="index.html"
+                class="font-medium text-lg hover:text-color_one"
                 >Services</a
               >
             </li>
+
             <li>
               <a
-                href="#"
-                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
+                href="index.html"
+                class="font-medium text-lg hover:text-color_one"
                 >Pricing</a
               >
             </li>
+
             <li>
               <a
                 href="#career"
-                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color_one md:p-0"
+                class="font-medium text-lg hover:text-color_one"
                 >Career</a
               >
             </li>
+
             <li>
               <a
                 href="#"
-                class="relative inline-flex items-center justify-start px-6 py-1.5 overflow-hidden font-medium transition-all rounded-full hover:bg-white group bg-white"
+                class="relative inline-flex items-center justify-start px-6 py-1.5 overflow-hidden font-medium transition-all rounded-full hover:bg-white group bg-color_black"
               >
                 <span
-                  class="w-48 h-48 rounded rotate-[-40deg] bg-color_one absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"
+                  class="w-48 h-48 rounded rotate-[-40deg] bg-color_one absolute bottom-0 left-0 -translate-x-full ease-out duration-700 transition-all translate-y-full mb-10 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"
                 ></span>
                 <span
-                  class="relative w-full text-left text-color_black transition-colors duration-300 ease-in-out group-hover:text-white"
+                  class="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-white"
                 >
                   <i class="fa-regular fa-user"></i> Log-in
                 </span>
@@ -185,9 +144,8 @@
         </div>
       </div>
     </nav>
+    <!-- Navbar -->
     <header>
-      <!-- Navbar -->
-
       <!-- Hero section -->
       <div
         style="background-image: url('image/hero-bg.svg')"
@@ -404,39 +362,51 @@
             </div>
             <div class="flex justify-center pb-4">
               <a
-              href="#_"
-              class="relative inline-flex items-center px-10 py-4 overflow-hidden text-lg font-medium text-color_one border border-color_one rounded-full hover:text-white group hover:bg-gray-50 mt-6 "
-            >
-              <span
-                class="absolute left-0 block w-full h-0 transition-all bg-color_one opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"
-              ></span>
-              <span
-                class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease"
+                href="#_"
+                class="relative inline-flex items-center px-10 py-4 overflow-hidden text-lg font-medium text-color_one border border-color_one rounded-full hover:text-white group hover:bg-gray-50 mt-6"
               >
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="absolute left-0 block w-full h-0 transition-all bg-color_one opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"
+                ></span>
+                <span
+                  class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  ></path>
-                </svg>
-              </span>
-              <span class="relative">Read more reviews</span>
-            </a>
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="relative">Read more reviews</span>
+              </a>
             </div>
           </div>
         </div>
         <img src="image/wave-b.svg" alt="" />
       </section>
-    </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+      <!-- Frequently asked questions -->
+      <section class="max-w-3xl mx-auto mb-32">
+        <img
+          class="w-16 mx-auto mb-4"
+          src="icon/icon-shield-question.svg"
+          alt=""
+        />
+        <h1 class="text-5xl font-black text-center">
+          Frequently asked questions
+        </h1>
+
+        <!-- Questions box -->
+      </section>
+    </main>
   </body>
 </html>

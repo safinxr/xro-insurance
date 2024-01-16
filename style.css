@@ -8,3 +8,31 @@ body {
     font-family: 'Roboto', sans-serif;
 
 }
+
+
+/* ======================Navbar================== */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 200px;
+    border-radius: 5px;
+
+}
+
+.dropdown-menu li {
+    padding: 5px 10px;
+}
+
+.dropdown-menu li:hover {
+    background-color: #E10EF3;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
