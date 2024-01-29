@@ -49,6 +49,61 @@
       src="https://kit.fontawesome.com/71bc8e0eff.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Email JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // Extract form data
+            const formData = {
+              name: this.name.value,
+              email: this.email.value,
+              phone: this.phone.value,
+              position: this.position.value,
+              salary: this.salary.value,
+              location: this.location.value,
+              visaStatus: this.visaStatus.value,
+              animal: this.animal.value,
+              description: this.description.value,
+              leavingReason: this.leavingReason.value,
+              whyCandidate: this.whyCandidate.value,
+              weaknesses: this.weaknesses.value,
+              whatCanYouDo: this.whatCanYouDo.value,
+            };
+
+            // These IDs are from your Email.js service and template
+            emailjs
+              .send(
+                "service_13xe0ld",
+                "template_sifzm1n",
+                formData,
+                "fjm3jS7pxUvuDOb2i"
+              )
+              .then(
+                function (response) {
+                  console.log("Email sent successfully:", response);
+                  const toast = document.getElementById("toast");
+                  toast.classList.remove("hidden");
+                  document.getElementById("contact-form").reset()
+                  function myFunction() {
+                    toast.classList.add("hidden");
+                  }
+
+                  setTimeout(myFunction, 3000);
+                },
+                function (error) {
+                  console.log("Failed to send email:", error);
+                }
+              );
+          });
+      };
+    </script>
   </head>
   <body>
     <noscript
@@ -764,12 +819,23 @@
       </section>
 
       <!-- career section -->
+      <div class="toast hidden" id="toast">
+        <div class="alert alert-info">
+          <span class="text-white"
+            ><i class="fa-regular fa-circle-check"></i> Career from submitted
+            successfully</span
+          >
+        </div>
+      </div>
       <section
         id="career"
         class="max-w-6xl mx-auto my-32 px-2 sw-two py-12 rounded-xl"
       >
         <h2 class="text-4xl font-bold my-4 text-center">Submit Your Resume</h2>
-        <form class="py-6 px-4 grid grid-cols-4 gap-4 font-medium">
+        <form
+          id="contact-form"
+          class="py-6 px-4 grid grid-cols-4 gap-4 font-medium"
+        >
           <!-- Name -->
           <div class="">
             <label class="label">
@@ -777,6 +843,7 @@
             </label>
             <input
               type="text"
+              name="name"
               placeholder="Enter your name"
               class="input input-bordered h-10 w-full input-primary text-base"
               required
@@ -789,6 +856,7 @@
             </label>
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
               class="input input-bordered h-10 w-full input-primary"
               required
@@ -801,6 +869,7 @@
             </label>
             <input
               type="number"
+              name="phone"
               placeholder="Enter your Phone Number"
               class="input input-bordered h-10 w-full input-primary"
               required
@@ -813,6 +882,7 @@
             </label>
             <select
               class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none"
+              name="position"
             >
               <option disabled selected>Please choose an option</option>
               <option>Account manager</option>
@@ -869,6 +939,7 @@
             </label>
             <input
               type="number"
+              name="salary"
               placeholder="What is your Salary expectations?"
               class="input input-bordered h-10 w-full input-primary"
               required
@@ -881,6 +952,7 @@
             </label>
             <select
               class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none"
+              name="location"
             >
               <option disabled selected>Please choose an option</option>
               <option>Chandigarh</option>
@@ -897,6 +969,7 @@
             </label>
             <select
               class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none"
+              name="visaStatus"
             >
               <option disabled selected>Please choose an option</option>
               <option>Employment</option>
@@ -916,6 +989,7 @@
             </label>
             <input
               type="text"
+              name="animal"
               placeholder="Animal which matches your personality"
               class="input input-bordered h-10 w-full input-primary"
               required
@@ -927,6 +1001,7 @@
               <span class="label-text">Description Or Cover Letter</span>
             </label>
             <textarea
+              name="description"
               rows="1"
               class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
               placeholder="Description"
@@ -935,10 +1010,13 @@
           <!-- Why are you leaving your current job? -->
           <div class="">
             <label class="label">
-              <span class="label-text">Description Or Cover Letter</span>
+              <span class="label-text"
+                >Why are you leaving your current job?</span
+              >
             </label>
             <textarea
               rows="1"
+              name="leavingReason"
               class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
               placeholder="Reason?"
             ></textarea>
@@ -951,6 +1029,7 @@
               >
             </label>
             <textarea
+              name="whyCandidate"
               rows="1"
               class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
               placeholder="Explain?"
@@ -964,6 +1043,7 @@
               >
             </label>
             <textarea
+              name="weaknesses"
               rows="1"
               class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
               placeholder="your weaknesses?"
@@ -977,6 +1057,7 @@
               >
             </label>
             <textarea
+              name="whatCanYouDo"
               rows="1"
               class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
               placeholder="Explain"
