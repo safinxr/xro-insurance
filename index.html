@@ -54,56 +54,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    <script type="text/javascript">
-      window.onload = function () {
-        document
-          .getElementById("contact-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            // Extract form data
-            const formData = {
-              name: this.name.value,
-              email: this.email.value,
-              phone: this.phone.value,
-              position: this.position.value,
-              salary: this.salary.value,
-              location: this.location.value,
-              visaStatus: this.visaStatus.value,
-              animal: this.animal.value,
-              description: this.description.value,
-              leavingReason: this.leavingReason.value,
-              whyCandidate: this.whyCandidate.value,
-              weaknesses: this.weaknesses.value,
-              whatCanYouDo: this.whatCanYouDo.value,
-            };
-
-            // These IDs are from your Email.js service and template
-            emailjs
-              .send(
-                "service_13xe0ld",
-                "template_sifzm1n",
-                formData,
-                "fjm3jS7pxUvuDOb2i"
-              )
-              .then(
-                function (response) {
-                  console.log("Email sent successfully:", response);
-                  const toast = document.getElementById("toast");
-                  toast.classList.remove("hidden");
-                  document.getElementById("contact-form").reset()
-                  function myFunction() {
-                    toast.classList.add("hidden");
-                  }
-
-                  setTimeout(myFunction, 3000);
-                },
-                function (error) {
-                  console.log("Failed to send email:", error);
-                }
-              );
-          });
-      };
-    </script>
+    <script src="main.js"></script>
   </head>
   <body>
     <noscript
@@ -819,14 +770,7 @@
       </section>
 
       <!-- career section -->
-      <div class="toast hidden" id="toast">
-        <div class="alert alert-info">
-          <span class="text-white"
-            ><i class="fa-regular fa-circle-check"></i> Career from submitted
-            successfully</span
-          >
-        </div>
-      </div>
+
       <section
         id="career"
         class="max-w-6xl mx-3 md:mx-7 lg:mx-auto my-20 md:my-32 px-2 sw-two py-12 rounded-xl"
@@ -1094,8 +1038,13 @@
           <!-- button -->
           <div class="md:col-span-2 lg:col-span-4 flex justify-center">
             <button class="btn btn-primary text-white text-xl px-14 mt-4 md:mt-8">
-              Submit
+              <span id="btnText">Submit</span> <img id="btnImg" class="h-8 hidden" src="icon/spiner.gif" alt="">
             </button>
+          </div>
+          <!-- successfully message -->
+          <div class="md:col-span-2 lg:col-span-4 flex justify-center">
+            <p id="toast" class="duration-500 absolute py-1.5 px-4 bg-green-400 text-white rounded-md opacity-0 "><i class="fa-regular fa-circle-check"></i> Career form submitted
+            successfully</p>
           </div>
         </form>
       </section>
