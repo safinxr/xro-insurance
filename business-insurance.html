@@ -40,6 +40,12 @@
       src="https://kit.fontawesome.com/71bc8e0eff.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Email JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="main.js"></script>
   </head>
   <body>
     <noscript>
@@ -92,7 +98,7 @@
                 </ul>
               </li>
               <li><a href="../">Compare</a></li>
-              <li><a href="../#career">Career</a></li>
+              <li><a onclick="scrollToTarget()">Career</a></li>
               <li>
                 <a href="" class="font-medium text-lg hover:text-color_one"
                   ><i class="fa-regular fa-user"></i> Log-in</a
@@ -147,7 +153,7 @@
             </li>
 
             <li>
-              <a href="../#career" class="font-medium text-lg hover:text-color_one"
+              <a onclick="scrollToTarget()" class="font-medium text-lg hover:text-color_one cursor-pointer"
                 >Career</a
               >
             </li>
@@ -269,6 +275,285 @@
         </section>
       </section>
     </main>
+
+    <!-- career section -->
+      <section
+        id="career"
+        class="max-w-6xl mx-3 md:mx-7 lg:mx-auto my-20 md:my-32 px-2 sw-two py-12 rounded-xl"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold md:my-4 text-center">Submit Your Resume</h2>
+        <form
+          id="contact-form"
+          class="py-6 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 font-medium"
+        >
+          <!-- Name -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Name</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              class="input input-bordered h-10 w-full input-primary text-base"
+              required
+            />
+          </div>
+          <!-- Email -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Email</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              class="input input-bordered h-10 w-full input-primary"
+              required
+            />
+          </div>
+          <!-- Phone -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Phone Number</span>
+            </label>
+            <input
+              type="number"
+              name="phone"
+              placeholder="Enter your Phone Number"
+              class="input input-bordered h-10 w-full input-primary"
+              required
+            />
+          </div>
+          <!-- Position Apply For  -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Position Apply For </span>
+            </label>
+            <select
+              class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none"
+              name="position"
+              required
+            >
+              <option disabled selected>Please choose an option</option>
+              <option>Account manager</option>
+              <option>Accountant</option>
+              <option>Advertising Manager</option>
+              <option>Android Developer</option>
+              <option>App Developer</option>
+              <option>Associate Manager</option>
+              <option>Brand manager</option>
+              <option>Business Development Manager</option>
+              <option>Compliance Officer</option>
+              <option>Cashier</option>
+              <option>Clerk</option>
+              <option>Data Scientist</option>
+              <option>Digital Marketer</option>
+              <option>Executive Assistant</option>
+              <option>Finance Manager</option>
+              <option>Financial Accountant</option>
+              <option>Financial Analyst</option>
+              <option>General Manager</option>
+              <option>Logic Developer</option>
+              <option>iOS Developer</option>
+              <option>Lawyer Manager</option>
+              <option>Network Engineer</option>
+              <option>Electrical Engineer</option>
+              <option>Office Administrator</option>
+              <option>Operations</option>
+              <option>Partnerships Manager</option>
+              <option>Procurement Manager</option>
+              <option>Project Coordination</option>
+              <option>Project Manager</option>
+              <option>Quality & Brand Experience Manager</option>
+              <option>React Native Developer</option>
+              <option>Retail Sales</option>
+              <option>Sales</option>
+              <option>Secretary</option>
+              <option>Senior Consultant</option>
+              <option>SEO Executive</option>
+              <option>Software Architect</option>
+              <option>Software Tester</option>
+              <option>System Administrator</option>
+              <option>Telecaller Sales</option>
+              <option>Transportation Associate/Engagement Manager</option>
+              <option>UI/UX Designer</option>
+              <option>Vice President</option>
+              <option>Web Designer</option>
+              <option>Web Developer</option>
+            </select>
+          </div>
+          <!-- What is your Salary expectations?  -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">What is your Salary expectations?</span>
+            </label>
+            <input
+              type="number"
+              name="salary"
+              placeholder="What is your Salary expectations?"
+              class="input input-bordered h-10 w-full input-primary"
+              required
+            />
+          </div>
+          <!-- Preferred Job Location  -->
+          <div class=" ">
+            <label class="label">
+              <span class="label-text">Preferred Job Location </span>
+            </label>
+            <select
+              class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none"
+              name="location"
+              required
+            >
+              <option disabled selected>Please choose an option</option>
+              <option>Chandigarh</option>
+              <option>Mumbai</option>
+              <option>UAE</option>
+              <option>Saudi Arabia</option>
+              <option>Canada</option>
+            </select>
+          </div>
+          <!-- Visa Status  -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Visa Status </span>
+            </label>
+            <select
+              class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none"
+              name="visaStatus"
+              required
+            >
+              <option disabled selected>Please choose an option</option>
+              <option>Employment</option>
+              <option>Spouse</option>
+              <option>Visit</option>
+              <option>Student</option>
+              <option>Citizenship</option>
+              <option>Parent sponsor</option>
+            </select>
+          </div>
+          <!-- If you an animal, which you want to be? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text"
+                >If you an animal, which you want to be?</span
+              >
+            </label>
+            <input
+              type="text"
+              name="animal"
+              placeholder="Animal which matches your personality"
+              class="input input-bordered h-10 w-full input-primary"
+              required
+            />
+          </div>
+          <!-- Description Or Cover Letter -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Description Or Cover Letter</span>
+            </label>
+            <textarea
+              name="description"
+              rows="1"
+              class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
+              placeholder="Description"
+              required
+            ></textarea>
+          </div>
+          <!-- Why are you leaving your current job? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text"
+                >Why are you leaving your current job?</span
+              >
+            </label>
+            <textarea
+              rows="1"
+              name="leavingReason"
+              class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
+              placeholder="Reason?"
+              required
+            ></textarea>
+          </div>
+          <!-- Why you are right candidate for this job? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text"
+                >Why you are right candidate for this job?</span
+              >
+            </label>
+            <textarea
+              name="whyCandidate"
+              rows="1"
+              class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
+              placeholder="Explain?"
+              required
+            ></textarea>
+          </div>
+          <!-- What are your weaknesses? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text"
+                >Why you are right candidate for this job?</span
+              >
+            </label>
+            <textarea
+              name="weaknesses"
+              rows="1"
+              class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
+              placeholder="your weaknesses?"
+              required
+            ></textarea>
+          </div>
+          <!-- What can you do for us that others can't? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text"
+                >What can you do for us that others can't?</span
+              >
+            </label>
+            <textarea
+              name="whatCanYouDo"
+              rows="1"
+              class="text-base w-full h-10 border border-primary px-3 rounded-lg outline-none pt-2"
+              placeholder="Explain"
+              required
+            ></textarea>
+          </div>
+          <!-- Attach Resume File -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Attach Resume File</span>
+            </label>
+            <input
+              type="file"
+              class="file-input file-input-bordered file-input-primary w-full h-10"
+            />
+          </div>
+          <!-- Upload your Passport size picture. -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Upload your Passport size picture.</span>
+            </label>
+            <input
+              type="file"
+              class="file-input file-input-bordered file-input-primary w-full h-10"
+            />
+          </div>
+          <!-- button -->
+          <div class="md:col-span-2 lg:col-span-4 flex justify-center">
+            <button class="btn btn-primary text-white text-xl px-14 mt-4 md:mt-8">
+              <span id="btnText">Submit</span> <img id="btnImg" class="h-8 hidden" src="icon/spiner.gif" alt="">
+            </button>
+          </div>
+          <!-- successfully message -->
+          <div class="md:col-span-2 lg:col-span-4 flex justify-center">
+            <p id="toast" class="duration-500 absolute py-1.5 px-4 bg-green-400 text-white rounded-md opacity-0 "><i class="fa-regular fa-circle-check"></i> Career form submitted
+            successfully</p>
+          </div>
+        </form>
+      </section>
 
     <!-- footer -->
     <footer class="footer p-10 bg-color_black text-gray-500 mt-24">
