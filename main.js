@@ -1,4 +1,12 @@
 
+function scrollToTarget (){
+    document.getElementById("career").scrollIntoView()
+}
+
+
+
+
+
 window.onload = function () {
     
     document
