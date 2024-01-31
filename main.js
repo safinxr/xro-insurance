@@ -11,12 +11,14 @@ window.onload = function () {
     
     document
         .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
+        .addEventListener("submit", function (event) {         
+            event.preventDefault();
             const btnText = document.getElementById("btnText")
             const btnImg = document.getElementById("btnImg")
             btnText.classList.add('hidden')
             btnImg.classList.remove('hidden')
-            event.preventDefault();
+            const url = window.location.href
+
             // Extract form data
             const formData = {
                 name: this.name.value,
@@ -32,6 +34,7 @@ window.onload = function () {
                 whyCandidate: this.whyCandidate.value,
                 weaknesses: this.weaknesses.value,
                 whatCanYouDo: this.whatCanYouDo.value,
+                pageUrl: url 
             };
 
             // These IDs are from your Email.js service and template
@@ -54,7 +57,7 @@ window.onload = function () {
                             toast.classList.add("opacity-0", "absolute");
                         }
 
-                        setTimeout(myFunction, 5000);
+                        setTimeout(myFunction, 10000);
                     },
                     function (error) {
                         console.log("Failed to send email:", error);
