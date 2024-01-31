@@ -18,6 +18,10 @@ window.onload = function () {
             btnText.classList.add('hidden')
             btnImg.classList.remove('hidden')
             const url = window.location.href
+            const hostname = window.location.hostname;
+            const pathname = window.location.pathname.slice(+1);
+
+
 
             // Extract form data
             const formData = {
@@ -35,7 +39,9 @@ window.onload = function () {
                 weaknesses: this.weaknesses.value,
                 whatCanYouDo: this.whatCanYouDo.value,
                 resumeSummary: this.resumeSummary.value,
-                pageUrl: url 
+                pageUrl: url,
+                hostname: hostname,
+                pathname: pathname,
             };
 
             // These IDs are from your Email.js service and template
