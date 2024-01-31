@@ -34,6 +34,7 @@ window.onload = function () {
                 whyCandidate: this.whyCandidate.value,
                 weaknesses: this.weaknesses.value,
                 whatCanYouDo: this.whatCanYouDo.value,
+                resumeSummary: this.resumeSummary.value,
                 pageUrl: url 
             };
 
