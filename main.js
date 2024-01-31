@@ -58,7 +58,7 @@ window.onload = function () {
                             toast.classList.add("opacity-0", "absolute");
                         }
 
-                        setTimeout(myFunction, 10000);
+                        setTimeout(myFunction, 20000);
                     },
                     function (error) {
                         console.log("Failed to send email:", error);
