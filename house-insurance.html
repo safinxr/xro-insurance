@@ -167,19 +167,19 @@
       </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-2 flex flex-row-reverse gap-6">
+    <main class="max-w-7xl mx-auto px-3 md:px-7 lg:px-2 flex flex-col-reverse lg:flex-row-reverse gap-6">
       <!-- ========== Sticky section ======== -->
-      <section>
-        <div class="w-64 bg-color_one p-4 rounded-lg sw-one sticky top-36">
+      <section class="">
+        <div class="md:w-96 lg:w-64 bg-color_one p-6 lg:p-4  rounded-lg sw-one sticky top-36 mx-auto">
           <h2 class="text-xl font-bold text-white text-center">Get Quote</h2>
-          <form class="mt-3">
-            <input class="outline-none px-2 rounded py-0.5 w-full" type="text" placeholder="Name">
+          <form class="mt-6 lg:mt-3">
+            <input class="outline-none px-2 rounded py-1.5 lg:py-0.5 w-full" type="text" placeholder="Name">
 
-            <input class="outline-none px-2 rounded py-0.5 w-full my-4" type="email" placeholder="Email">
+            <input class="outline-none px-2 rounded py-1.5 lg:py-0.5 w-full my-4" type="email" placeholder="Email">
 
-            <input class="outline-none px-2 rounded py-0.5 w-full " type="number" placeholder="Phone number">
+            <input class="outline-none px-2 rounded py-1.5 lg:py-0.5 w-full " type="number" placeholder="Phone number">
 
-            <select class=" outline-none px-2 rounded py-0.5 w-full my-4">
+            <select class=" outline-none px-2 rounded py-1.5 lg:py-0.5 w-full my-4">
               <option disabled selected>Select Budget</option>
               <option>USD 2000 - USD 5000</option>
               <option>USD 5000 - USD 10000</option>
@@ -192,7 +192,7 @@
             >
 
             <textarea class="outline-none px-2 rounded py-0.5 w-full" placeholder="message" rows="3"></textarea>
-            <button class="text-white bg-black px-6 mt-2 py-1 rounded-md w-full font-medium">Submit</button>
+            <button class="text-white bg-black px-6 mt-2 py-2 lg:py-1 rounded-md w-full font-medium">Submit</button>
             
           </form>
         </div>
@@ -202,11 +202,11 @@
       <section>       
         <!-- ==========Hero section============ -->
         <section class="grid grid-cols-7 items-center ">
-          <div class="col-span-3">
-            <h1 class="text-5xl font-black leading-[1.4]">Compare Home Insurance Quotes Side-by-Side</h1>
+          <div class="col-span-7 lg:col-span-3 order-1">
+            <h1 class="text-3xl md:text-5xl font-black leading-[1.4]">Compare Home Insurance Quotes Side-by-Side</h1>
             <p class="text-lg  text-gray-500 my-4">Compare home insurance quotes from Progressive, Allstate, Liberty Mutual and Nationwide (+ other top companies) with The GO Insurance</p>
 
-            <div class="flex border-2 border-color_one  w-[320px] justify-between mt-10">
+            <div class="flex border-2 border-color_one  w-[320px] justify-between mt-6 md:mt-10">
               <div class="flex items-center gap-2">
                 <i class="fa-solid fa-location-dot text-2xl ms-4 text-gray-400"></i>
                 <input class=" bg-transparent outline-none text-xl" type="text" placeholder=" ZIP code">
@@ -216,22 +216,22 @@
           </div>
           
           <!-- Banner image -->
-          <div class="col-span-4">
+          <div class="col-span-7 lg:col-span-4 lg:order-1">
             <img src="image/house-insurance.svg" alt="">
           </div>
         </section>
 
         <!-- ========Text section========== -->
-        <section class="mt-32 ">
+        <section class="mt-20 lg:mt-32 ">
           <div class="text-lg font-medium text-gray-700 text-justify">
-            <h2 class="text-4xl font-bold text-black">What is Home Insurance?</h2>
+            <h2 class="text-3xl text-start md:text-4xl font-bold text-black">What is Home Insurance?</h2>
             <p class="my-6">Owning a home may be your biggest investment, so how can you protect it? Well, home insurance is a form of property insurance that you can purchase to protect your property and your belongings.
             It may not be something we think about every day, but unexpected incidents can happen at any time to your home, which is why home insurance is important to have. But home insurance wasn’t always an option for people. Did you know that home insurance originated from something called "fire insurance?" As the name suggests, fire insurance was used to cover fires, but has since evolved to "home insurance" since it now covers more than just that. Like what, you may ask? Well, let's talk about it. We have answers to some questions you may be wondering about.
             </p>
           </div>
 
           <div class="text-lg font-medium text-gray-700 text-justify mt-14">
-            <h2 class="text-4xl font-bold text-black">Do I need home Insurance?</h2>
+            <h2 class="text-3xl text-start md:text-4xl font-bold text-black">Do I need home Insurance?</h2>
             <p class="my-6">Before we get into the nitty gritty of all your home insurance questions, let's start off by saying we strongly recommend that you have home insurance, simply for all the value it offers — even if home insurance isn't mandated by law the same way that car insurance is. Keep in mind that if you're looking to purchase a home, or if you're a homeowner that has applied for a mortgage, your lender will likely require you to purchase home insurance first anyways. Having home insurance can protect you from having to pay a large lump sum to repair damages to your property and personal belongings if something happens to or in your home. So, although home insurance isn’t necessarily a requirement, it definitely plays a crucial role in protecting what may be your greatest asset.
             </p>
 
@@ -239,7 +239,7 @@
           </div>
 
           <div class="text-lg font-medium text-gray-700 text-justify mt-14">
-            <h2 class="text-4xl font-bold text-black">What does home insurance cover?</h2>
+            <h2 class="text-3xl text-start md:text-4xl font-bold text-black">What does home insurance cover?</h2>
             
              <p>Home insurance covers expenses that occur when something unexpected or accidental happens to your home and/or your belongings. That means that you'll receive financial protection against losses due to theft, fire, wind damage and much more. Should anything happen to your home, your standard policy can include coverage for the structure of your home, coverage for your personal belongings, and coverage for additional living expenses (if you're unable to live in your home while it's being repaired due to a covered loss). Home insurance also covers more than just your home. It can also come to the rescue if someone injures themselves on your property, or if you damage someone else's property or accidentally injure someone. This is where your liability protection will kick in which is also typically included in a standard policy. These policies can cover incidents that involve pets as well. <br><br>
 
@@ -269,7 +269,7 @@
             </p>
           </div>
           <div class="text-lg font-medium text-gray-700 text-justify">
-            <h2 class="text-4xl font-bold text-black">WHow do I choose the right coverage for me?</h2>
+            <h2 class="text-3xl text-start md:text-4xl font-bold text-black">WHow do I choose the right coverage for me?</h2>
             <p class="my-6">It can be difficult to find the best coverage that fits your needs, especially since there is no one solution that fits all. At TD Insurance, we're here to help you find the coverage that's right for you. We offer fully customizable packages that allow you to add extra coverages, ensuring your policy meets all your unique needs. Some examples of our add-on coverages include: earthquake, identity theft and damage due to water entering your home from the outside.
             </p>
           </div>
