@@ -47,10 +47,10 @@ window.onload = function () {
             // These IDs are from your Email.js service and template
             emailjs
                 .send(
-                    "service_13xe0ld",
-                    "template_sifzm1n",
+                    "service_ovzmebw",
+                    "template_0zflxy1",
                     formData,
-                    "fjm3jS7pxUvuDOb2i"
+                    "pEchiJh5AQZLHamcq"
                 )
                 .then(
                     function (response) {
